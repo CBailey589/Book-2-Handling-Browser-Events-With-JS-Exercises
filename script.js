@@ -168,7 +168,7 @@
 //         power.classList.remove("disabled")
 //         power.classList.add("enabled")
 //     });
-    
+
 // }
 
 // const deactivateAllPowers = function (event) {
@@ -214,8 +214,9 @@
 
 // *********************Dynamic Cards ***********************************
 let cardCounter = 0;
+let bucket = document.querySelector("#cardBucket")
 
-const makeCardHTML = function (cardText, cardCounter ) {
+const makeCardHTML = function (cardText, cardCounter) {
     return `
     <article class="card" id="card--${cardCounter}">
         <div>${cardText}</div>
@@ -226,19 +227,23 @@ const makeCardHTML = function (cardText, cardCounter ) {
     `
 }
 
-const removeCardHTML = function () {
-    let id = event.target.id.replace("delete--" ,"");
-    let cardToBeDeleted = document.querySelector(`#card--${id}`);
-    let bucket = document.querySelector("#cardBucket");
-    bucket.removeChild(cardToBeDeleted);
+const removeCardHTML = function (event) {
+    if (event.target.id.startsWith("delete")) {
+        // console.log(event.target.id)
+        let id = event.target.id.split("--");
+        let cardToBeDeleted = document.querySelector(`#card--${id[1]}`);
+        // console.log(event.target);
+        // console.log("container", event.currentTarget);
+        bucket.removeChild(cardToBeDeleted);
+    }
 }
 
 const makeCard = function () {
-    let bucket = document.querySelector("#cardBucket")
-    cardCounter ++;
+    cardCounter++;
     bucket.innerHTML += makeCardHTML(document.querySelector("#cardInput").value, cardCounter)
-    let newCardButton = document.querySelector(`#delete--${cardCounter}`);
-    newCardButton.addEventListener("click", removeCardHTML)
+    document.querySelector(`#delete--${cardCounter}`).addEventListener("click", removeCardHTML);
 }
 
 document.querySelector("#cardCreate").addEventListener("click", makeCard)
+document.querySelector("#cardBucket").addEventListener("click", removeCardHTML)
+
