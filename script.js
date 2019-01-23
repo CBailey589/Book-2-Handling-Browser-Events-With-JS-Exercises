@@ -208,5 +208,37 @@
 
 
 
-// *********************Dynamic Cards
 
+
+
+
+// *********************Dynamic Cards ***********************************
+let cardCounter = 0;
+
+const makeCardHTML = function (cardText, cardCounter ) {
+    return `
+    <article class="card" id="card--${cardCounter}">
+        <div>${cardText}</div>
+        <div>
+            <button id="delete--${cardCounter}">Delete This Card</button>
+        </div>
+    </article>
+    `
+}
+
+const removeCardHTML = function () {
+    let id = event.target.id.replace("delete--" ,"");
+    let cardToBeDeleted = document.querySelector(`#card--${id}`);
+    let bucket = document.querySelector("#cardBucket");
+    bucket.removeChild(cardToBeDeleted);
+}
+
+const makeCard = function () {
+    let bucket = document.querySelector("#cardBucket")
+    cardCounter ++;
+    bucket.innerHTML += makeCardHTML(document.querySelector("#cardInput").value, cardCounter)
+    let newCardButton = document.querySelector(`#delete--${cardCounter}`);
+    newCardButton.addEventListener("click", removeCardHTML)
+}
+
+document.querySelector("#cardCreate").addEventListener("click", makeCard)

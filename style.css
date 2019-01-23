@@ -34,7 +34,7 @@
     /* border: 1px solid black; */
     /* display: flex;
     width: 100%
-} */ */
+} */ 
 
 /* .messageArticle {
     width: 50%;
@@ -93,7 +93,10 @@
 
 
 /**************************** Dynamic Cards start*/
-
+.card {
+    border: 1px solid blue;
+    margin: 50px;
+}
 
 
 
