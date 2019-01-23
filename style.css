@@ -1,0 +1,103 @@
+/* ******************** Chapter Exercise Start */
+/* .blue {  
+    color: blue;
+}
+
+.large {
+    font-size: 5em;
+}
+
+.bordered {
+    border: 1px dotted goldenrod
+}
+
+.rounded {
+    border-radius: 25%;
+} */
+/**********************Chapter Exercise End  */
+
+
+
+
+
+
+/********************************* Mirror in the code start */
+/* #mirrorMirrorInTheCode {
+    border: 2px solid blue;
+} */
+
+/* #message {
+    border: 2px solid black;
+} */
+
+/* #messageArticleHolder {
+    /* border: 1px solid black; */
+    /* display: flex;
+    width: 100%
+} */ 
+
+/* .messageArticle {
+    width: 50%;
+    height: 100px;
+} */
+
+/* #messageArticle1 {
+    border: 1px solid green;
+}
+#messageArticle2 {
+    border: 1px solid purple;
+} */
+/********************** Mirror in the code end */
+
+/***************** Scrolling and Scaling start */
+/* #container {
+    display: flex;
+    min-height: 1500px;
+}
+  
+#audrey {
+    background-color: purple;
+    color: snow;
+    min-height: 100px;
+    min-width:  50px;
+    position: fixed;
+} */
+/************************* Scrolling and Scaling end */
+
+
+
+
+
+
+
+/* ********************** Wonder Powers Activate start*/
+/* .disabled {
+    background-color: gray;
+}
+
+.enabled {
+    background-color: fuchsia;
+    color: goldenrod;
+}  */
+/******************* Wonder Powers Activate end */
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************** Dynamic Cards start*/
+.card {
+    border: 1px solid blue;
+    margin: 50px;
+}
+
+
+
+/**************************** Dynamic Cards end*/
